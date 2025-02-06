@@ -1,0 +1,13 @@
+select title from movies where year == 2008;
+select distinct name from people join directors on people.id =  directors.person_id join movies on movies.id = directors.movie_id join ratings on ratings.movie_id = movies.id where rating >= 9;
+select title from movies join stars on stars.movie_id = movies.id join people on people.id = stars.person_id join ratings on ratings.movie_id = movies.id where name == "Chadwick Boseman" order by rating desc limit 5;
+select title from movies join stars stars1 on stars1.movie_id = movies.id join people as people1 on people1.id = stars1.person_id join stars stars2 on stars2.movie_id = movies.id join people as people2 on people2.id = stars2.person_id where people1.name == "Bradley Cooper" and people2.name == "Jennifer Lawrence";
+select people.name from people join stars on people.id = stars.person_id join movies on movies.id = stars.movie_id where people.name != "Kevin Bacon" and title in ( select title from movies join people on people.id = stars.person_id join stars on movies.id = stars.movie_id where people.name = "Kevin Bacon");
+select birth from people where name == "Emma Stone";
+select title from movies where year >= 2018 ORDER BY title asc;
+select count(title) from ratings join movies on ratings.movie_id = movies.id where rating == 10;
+select title, year from movies where title like "Harry Potter%" order by year asc;
+select avg(rating) from ratings join movies on ratings.movie_id = movies.id where year == 2012;
+select title,rating from ratings join movies on ratings.movie_id = movies.id where year == 2010 order by rating desc, title asc;
+select name from people join stars on people.id =  stars.person_id join movies on movies.id = stars.movie_id where title == "Toy Story";
+select distinct name from people join stars on people.id =  stars.person_id join movies on movies.id = stars.movie_id where year == 2004 order by birth asc;
