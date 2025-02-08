@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Quiz</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your CSS file -->
+</head>
+<body>
+    <h1>Multiple Choice Quiz</h1>
+    <div id="question-container">
+        <p>What is the capital of France?</p>
+        <input type="radio" name="answer" value="Paris"> Paris<br>
+        <input type="radio" name="answer" value="Berlin"> Berlin<br>
+        <input type="radio" name="answer" value="Madrid"> Madrid<br>
+        <input type="radio" name="answer" value="Rome"> Rome<br>
+        <button id="submit-answer">Submit</button>
+        <p id="feedback"></p>
+
+        
+        <p>What is the capital of Germany?</p>
+        <input type="radio" name="answer" value="Paris"> Paris<br>
+        <input type="radio" name="answer" value="Berlin"> Berlin<br>
+        <input type="radio" name="answer" value="Madrid"> Madrid<br>
+        <input type="radio" name="answer" value="Rome"> Rome<br>
+        <button id="submit-answer1">Submit</button>
+        <p id="feedback1"></p>
+
+        <form id="myForm">
+          <label for="user_text">What is the answer of life?</label><br>
+          <input type="text" id="myTextBox" name="user_text"><br><br>
+          <button type="submit">Submit</button>
+        <div id="resultArea" style="padding: 20px; border: 1px solid black;">
+          This div's color will change based on your answer.
+        </div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
